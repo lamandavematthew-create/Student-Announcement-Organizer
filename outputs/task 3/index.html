@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f8f5" />
+    <meta
+      name="description"
+      content="A student-friendly dashboard for school announcements at Marinduque State University."
+    />
+    <title>Campus Bulletin — Marinduque State University</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a
+          class="identity"
+          href="#home"
+          aria-label="Marinduque State University Campus Bulletin home"
+        >
+          <span class="seal" aria-hidden="true"><span>MarSU</span></span>
+          <span class="identity-copy"
+            ><strong>MARINDUQUE STATE UNIVERSITY</strong
+            ><span>STUDENT CAMPUS BULLETIN</span></span
+          >
+        </a>
+        <a class="header-link" href="#announcements"
+          >Browse announcements <span aria-hidden="true">↓</span></a
+        >
+      </header>
+
+      <main id="home">
+        <section class="hero" aria-labelledby="page-title">
+          <div class="hero-copy">
+            <p class="eyebrow">
+              <span class="eyebrow-line"></span> YOUR CAMPUS, IN THE KNOW
+            </p>
+            <h1 id="page-title">
+              Good things happen<br />when you <span>stay informed.</span>
+            </h1>
+            <p class="hero-description">
+              A clearer view of what’s happening at Marinduque State University.
+              Find the updates you need and get on with your day.
+            </p>
+            <a class="hero-link" href="#announcements"
+              >Explore announcements <span aria-hidden="true">↘</span></a
+            >
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="art-sun"></div>
+            <div class="art-hill hill-back"></div>
+            <div class="art-hill hill-front"></div>
+            <div class="art-card">
+              <span class="art-card-icon">✳</span
+              ><span
+                ><b>Campus bulletin</b
+                ><small>Your next update is here</small></span
+              ><span class="art-arrow">↗</span>
+            </div>
+            <span class="art-caption">MARINDUQUE · PHILIPPINES</span>
+          </div>
+          <div class="hero-index" aria-hidden="true">
+            <span>01</span><i></i><span>03</span>
+          </div>
+        </section>
+
+        <section
+          class="bulletin"
+          id="announcements"
+          aria-labelledby="bulletin-title"
+        >
+          <div class="section-intro">
+            <div>
+              <p class="eyebrow">
+                <span class="eyebrow-line"></span> THE LATEST FROM CAMPUS
+              </p>
+              <h2 id="bulletin-title">
+                Campus bulletin<span class="heading-period">.</span>
+              </h2>
+              <p class="section-description">
+                School updates, all in one place. The examples below are
+                fictional.
+              </p>
+            </div>
+            <div class="update-note">
+              <span class="live-dot"></span>
+              <span id="result-count" aria-live="polite">0 announcements</span>
+            </div>
+          </div>
+
+          <div class="toolbar">
+            <div
+              class="filters"
+              role="group"
+              aria-label="Filter announcements by category"
+            >
+              <button
+                class="filter-button is-active"
+                type="button"
+                data-category="All"
+                aria-pressed="true"
+              >
+                All <span class="filter-count" data-count="All">0</span>
+              </button>
+              <button
+                class="filter-button"
+                type="button"
+                data-category="Academic"
+                aria-pressed="false"
+              >
+                Academic
+                <span class="filter-count" data-count="Academic">0</span>
+              </button>
+              <button
+                class="filter-button"
+                type="button"
+                data-category="Events"
+                aria-pressed="false"
+              >
+                Events <span class="filter-count" data-count="Events">0</span>
+              </button>
+              <button
+                class="filter-button"
+                type="button"
+                data-category="General"
+                aria-pressed="false"
+              >
+                General <span class="filter-count" data-count="General">0</span>
+              </button>
+              <button
+                class="filter-button"
+                type="button"
+                data-category="Saved"
+                aria-pressed="false"
+              >
+                Saved <span class="filter-count" data-count="Saved">0</span>
+              </button>
+            </div>
+            <form class="search" role="search" id="search-form">
+              <label class="sr-only" for="search-input"
+                >Search announcements</label
+              >
+              <span class="search-icon" aria-hidden="true"></span>
+              <input
+                id="search-input"
+                name="q"
+                type="search"
+                placeholder="Search announcements..."
+                autocomplete="off"
+              />
+              <button
+                class="clear-search"
+                id="clear-search"
+                type="button"
+                aria-label="Clear search"
+                hidden
+              >
+                ×
+              </button>
+              <kbd aria-hidden="true">/</kbd>
+            </form>
+          </div>
+
+          <div
+            class="announcement-list"
+            id="announcement-list"
+            aria-live="polite"
+          ></div>
+          <div class="empty-state" id="empty-state" hidden>
+            <span class="empty-mark" aria-hidden="true">⌕</span>
+            <h3>No announcements found</h3>
+            <p>
+              Try another keyword or category to find what you’re looking for.
+            </p>
+            <button class="reset-button" id="reset-filters" type="button">
+              Clear filters
+            </button>
+          </div>
+          <p class="demo-note">
+            <span aria-hidden="true">✳</span> Demonstration content only —
+            announcements shown here are fictional.
+          </p>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <a class="footer-brand" href="#home">MarSU<span>.</span></a>
+        <p>Made for the Marinduque State University student community.</p>
+        <a class="back-top" href="#home"
+          >Back to top <span aria-hidden="true">↑</span></a
+        >
+      </footer>
+    </div>
+  </body>
+</html>
